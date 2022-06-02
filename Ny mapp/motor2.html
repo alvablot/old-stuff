@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+<script>
+function objekt(left,top,width,height,right,bottom){
+	this.left = left
+	this.top = top
+	this.width = width
+	this.height = height
+	this.right = right
+	this.bottom = bottom
+}
+var spelareStartpos = 250
+var malvakt = new objekt(70,175,40,100,null,null)
+var puck = new objekt(500,200,30,30,null,null)
+var mal = new objekt(20,140,64,116,null,null)
+var rink = new objekt(10,50,600,300,null,null)
+var obj = new Array()
+var musX = 300 , musY = spelareStartpos
+var spelarhojd = 150
+var dead = 50
+var hastighet = 1.5
+var malhastighet = 0.7
+var malwidth = 10
+var malheight = 30
+var puckwidth = 20
+var puckheight = 10
+var puckhastighet = 10
+var sense = 20
+var a = 1
+var skjuta = false
+var startad = false
+var saved = false
+var point = false
+function init(){
+	obj[0] = document.getElementById("lager0")
+	obj[1] = document.getElementById("lager1")
+	obj[2] = document.getElementById("lager2")
+	obj[3] = document.getElementById("lager3")
+	obj[4] = document.getElementById("lager4")
+	obj[4].style.height = puckheight
+	obj[4].style.width = puckwidth
+	obj[4].style.left = 500
+	obj[4].style.top = 200
+	
+	obj[3].style.left = 500
+	obj[3].style.top = spelareStartpos
+	
+	obj[0].style.left = rink.left
+	obj[0].style.top = rink.top
+	obj[0].style.width = rink.width
+	obj[0].style.height = rink.height
+	
+	obj[2].style.left = malvakt.left
+	obj[2].style.top = malvakt.top
+	obj[2].style.width = malvakt.width
+	obj[2].style.height = malvakt.height
+	malvakt.right = malvakt.left + malvakt.width
+	malvakt.bottom = malvakt.top + malvakt.height
+	
+	rink.right = rink.left + rink.width
+	rink.bottom = rink.top + rink.height
+	
+	obj[1].style.left = mal.left
+	obj[1].style.top = mal.top
+	obj[1].style.width = mal.width
+	obj[1].style.height = mal.height
+	mal.right = mal.left + mal.width
+	mal.bottom = mal.top + mal.height
+	
+	document.onmousemove = musCoor
+	document.onmousedown = skjut
+	document.onkeydown = start
+	motor()
+}
+function musCoor(){
+	musX = event.x
+	musY = event.y
+}
+var spelareStegY = 100
+var spelarePosY = spelareStartpos
+var spelareStegX = 1
+var spelareStegX2 = 1
+var spelarePosX = 500
+function flyttaSpelare(){
+	if(spelarePosX < dead || !startad || saved) spelareStegX = 0
+	else if(startad) {
+		spelareStegX = hastighet
+		spelarePosX -= spelareStegX
+	}
+	obj[3].style.left = spelarePosX
+	// flyttar spelare i y-led
+	if(musY > 340 && spelarePosY > 340) spelareStegY = 0
+	if(musY < 120 && spelarePosY < 120) spelareStegY = 0
+	spelarePosY -= spelareStegY
+	spelareStegY = (spelarePosY - musY)/sense
+	obj[3].style.top = spelarePosY - (spelarhojd/2)
+}
+var puckStegY = 100
+var puckPosY = 200
+var puckStegX = 1
+var puckPosX = spelarePosX
+function pucken(){
+	if(skjuta) {
+		if(!saved) puckStegX = puckhastighet
+		else if(saved || point)  {
+			puckStegX = 0
+			puckStegY = 0
+		}
+	}
+	else {
+		if(puckPosX < dead || !startad) puckStegX = 0
+		else if(startad) puckStegX = hastighet
+		// flyttar puck i y-led
+		puckStegY = (puckPosY - musY)/sense
+		
+	}
+	if(musY > 340 && puckPosY > 340) puckStegY = 0
+	if(musY < 120 && puckPosY < 120) puckStegY = 0
+	puckPosY -= puckStegY
+	puckPosX -= puckStegX
+	obj[4].style.top = puckPosY -3
+	obj[4].style.left = puckPosX
+	puck.left = puckPosX - 10
+	puck.top = puckPosY + 20
+	puck.width = puckwidth
+	puck.height = puckheight
+	puck.right = puckPosX + puckwidth
+	puck.bottom = puckPosY + puckheight + 18
+}
+var malStegY = 100
+var malPosY = malvakt.top
+var malStegX = 1
+var malPosX = malvakt.left
+function flyttaMalvakt(){
+	if(!startad || saved) {
+		malStegX = 0
+		malStegY = 0
+	}
+	else if(startad) {
+		malStegX = malhastighet
+		malPosX += malStegX
+		if (malPosX < 70 && a == 2) malhastighet = 0
+		else if(malPosX > 150) {
+			a = 2
+			malhastighet= -malhastighet
+		}
+	}
+
+	obj[2].style.left = malPosX
+	// flyttar spelare i y-led
+	malPosY -= malStegY
+	if(!skjuta) malStegY = (malPosY - musY)/50
+	else {
+		if(malPosY > 180) malStegY = +0 	
+		if(malPosY < 100) malStegY = +0 	
+	}
+	if(musY > 220 && malPosY > 220) malStegY = +0 	
+	if(musY < 150 && malPosY < 150) malStegY = +0 	
+	obj[2].style.top = malPosY - 20//+ 50
+	//obj[2].style.height = malheight
+	//obj[2].style.width = malwidth
+	malvakt.left = malPosX
+	malvakt.top = malPosY
+	//malvakt.width = malwidth
+	//malvakt.height = malheight
+	malvakt.right = malvakt.left + malvakt.width
+	malvakt.bottom = malvakt.top + malvakt.height
+}
+function start(){
+	if(event.keyCode == 32)
+		startad = true
+}
+function skjut(){
+	// när musen trycks ned blir denna true
+	if(startad) skjuta = true
+}
+function motor(){
+	flyttaSpelare()
+	pucken()
+	flyttaMalvakt()
+	kollaSave()
+	kollaRink()
+	kollaMal()
+	document.forms[0].f1.value = puck.bottom
+	document.forms[0].f2.value = malvakt.top 
+	tidgivare1 = setTimeout("motor()",10)
+	
+}
+function kollaSave(){
+	if(puck.left+10 < malvakt.right) {
+		//if(puck.top < malvakt.bottom + 10 && puck.bottom > malvakt.top +30 && puck.right < malvakt.left +30) save()
+		if(puck.top+20 < malvakt.bottom&& puck.bottom > malvakt.top && puck.right < malvakt.left +50) save()
+	}
+}
+function kollaRink(){
+	if(startad && skjuta) {
+		if(puck.left < rink.left) rinken()
+		if(puck.top < rink.top) rinken()
+		if(puck.bottom > rink.bottom) rinken()
+		if(puck.right > rink.right) rinken()
+	}
+}
+function kollaMal(){
+	window.status = point
+	if(startad && skjuta) {
+		if(puck.left+30 < mal.right -5) {
+			if(puck.top < mal.bottom + 10 && puck.bottom > mal.top +30) mala()
+		}
+	}
+}
+function mala(){
+	alert("Mål!")
+	clearTimeout(tidgivare1)
+}
+function save(){
+		alert("Räddning!")
+		clearTimeout(tidgivare1)
+}
+var studs = 0
+function rinken(){
+	studs++
+	if(studs>2){
+		alert("Miss!")
+		clearTimeout(tidgivare1)
+	}
+	puckhastighet = -puckhastighet
+}
+</script>
+</head>
+
+<body onload="init()" style="cursor:crosshair">
+<form><input type=text size=2 name=f1><input type=text size=2 name=f2><input type=text size=2 name=f3><input type=text size=2 name=f4><input type=text size=2 name=f5><input type=text size=2 name=f6><input type=text size=2 name=f7><input type=text size=2 name=f8></form>
+<div id="lager0"
+	style="
+		position:absolute;
+		border:1px solid black;"><img src="rink.gif"></div>
+<div id="lager1"
+	style="
+		position:absolute;
+		left:20px; top:100px;
+		width:10px; height:100px;
+		border:0px solid black;z-index:10;"><img src="mal.gif"></div>
+<div id="lager2"
+	style="
+		position:absolute;
+		left:50px; top:110px;
+		width:10px; height:50px;
+		border:0px solid black;"><img src="liv.gif"></div>
+<div id="lager3"
+	style="
+		position:absolute;
+		width:20px; height:50px;
+		border:0px solid black;"><img src="14.gif"></div>
+<div id="lager4"
+	style="
+		position:absolute;
+		width:10px; height:10px;
+		border:0px solid black;"><img src="puck.gif"></div>
+
+
+</body>
+</html>

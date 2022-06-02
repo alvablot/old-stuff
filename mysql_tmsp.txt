@@ -1,0 +1,248 @@
+Database masar_tabell - Table spel running on localhost 
+# phpMyAdmin SQL Dump
+# version 2.5.6-rc1
+# http://www.phpmyadmin.net
+#
+# Host: localhost
+# Generation Time: Feb 10, 2004 at 07:55 PM
+# Server version: 4.0.15
+# PHP Version: 4.2.3
+# 
+# Database : `masar_tabell`
+# 
+
+# --------------------------------------------------------
+
+#
+# Table structure for table `spel`
+#
+
+CREATE TABLE `spel` (
+  `namn` varchar(100) NOT NULL default '',
+  `poang` int(11) NOT NULL default '0',
+  `niva` int(11) NOT NULL default '0'
+) TYPE=MyISAM;
+
+#
+# Dumping data for table `spel`
+#
+
+INSERT INTO `spel` VALUES ('RossTheBoss', 295, 15);
+INSERT INTO `spel` VALUES ('DP', 0, 1);
+INSERT INTO `spel` VALUES ('Dalastark', 0, 1);
+INSERT INTO `spel` VALUES ('Bertil Boo', 65, 4);
+INSERT INTO `spel` VALUES ('Bertil Boo', 25, 2);
+INSERT INTO `spel` VALUES ('bonde', 0, 1);
+INSERT INTO `spel` VALUES ('Bonde', 0, 1);
+INSERT INTO `spel` VALUES ('Bonde igen', 0, 1);
+INSERT INTO `spel` VALUES ('Bonde på nytt', 0, 1);
+INSERT INTO `spel` VALUES ('Bonde', 0, 1);
+INSERT INTO `spel` VALUES ('Bonde', 5, 1);
+INSERT INTO `spel` VALUES ('Bonde', 0, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 0, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 0, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 30, 2);
+INSERT INTO `spel` VALUES ('Rossen', 30, 2);
+INSERT INTO `spel` VALUES ('Matematikern', 10, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 105, 6);
+INSERT INTO `spel` VALUES ('Arne Heger', 105, 6);
+INSERT INTO `spel` VALUES ('RossTheBoss', 65, 4);
+INSERT INTO `spel` VALUES ('Matematikern', 190, 9);
+INSERT INTO `spel` VALUES ('RossTheBoss', 120, 7);
+INSERT INTO `spel` VALUES ('Knug Olaf', 0, 1);
+INSERT INTO `spel` VALUES ('Knug Olaf', 0, 1);
+INSERT INTO `spel` VALUES ('Knug Olaf', 20, 2);
+INSERT INTO `spel` VALUES ('Knug Olaf', 0, 1);
+INSERT INTO `spel` VALUES ('Venjan', 0, 1);
+INSERT INTO `spel` VALUES ('Venjan', 5, 1);
+INSERT INTO `spel` VALUES ('Venjan', 5, 1);
+INSERT INTO `spel` VALUES ('Venjan', 30, 2);
+INSERT INTO `spel` VALUES ('RossTheBoss', 120, 7);
+INSERT INTO `spel` VALUES ('Venjan', 0, 1);
+INSERT INTO `spel` VALUES ('Krattan', 125, 7);
+INSERT INTO `spel` VALUES ('Nisse', 120, 7);
+INSERT INTO `spel` VALUES ('RossTheBoss', 205, 11);
+INSERT INTO `spel` VALUES ('Venjan', 20, 2);
+INSERT INTO `spel` VALUES ('Venjan', 25, 2);
+INSERT INTO `spel` VALUES ('Venjan', 45, 3);
+INSERT INTO `spel` VALUES ('Venjan', 65, 4);
+INSERT INTO `spel` VALUES ('Venjan', 65, 4);
+INSERT INTO `spel` VALUES ('Venjan', 60, 4);
+INSERT INTO `spel` VALUES ('Venjan', 100, 6);
+INSERT INTO `spel` VALUES ('Venjan', 65, 4);
+INSERT INTO `spel` VALUES ('Venjan', 65, 4);
+INSERT INTO `spel` VALUES ('Venjan', 5, 1);
+INSERT INTO `spel` VALUES ('Venjan', 70, 4);
+INSERT INTO `spel` VALUES ('Venjan', 100, 6);
+INSERT INTO `spel` VALUES ('Venjan', 80, 4);
+INSERT INTO `spel` VALUES ('Venjan', 65, 4);
+INSERT INTO `spel` VALUES ('Venjan', 90, 4);
+INSERT INTO `spel` VALUES ('Venjan', 120, 6);
+INSERT INTO `spel` VALUES ('Venjan', 5, 1);
+INSERT INTO `spel` VALUES ('Venjan', 140, 6);
+INSERT INTO `spel` VALUES ('nisse', 0, 1);
+INSERT INTO `spel` VALUES ('ghjghj', 0, 1);
+INSERT INTO `spel` VALUES ('gngn', 10, 1);
+INSERT INTO `spel` VALUES ('ghh', 45, 3);
+INSERT INTO `spel` VALUES ('hhmh', 100, 6);
+INSERT INTO `spel` VALUES ('tompa', 10, 1);
+INSERT INTO `spel` VALUES ('tompa', 5, 1);
+INSERT INTO `spel` VALUES ('tompa', 105, 6);
+INSERT INTO `spel` VALUES ('tompa', 100, 6);
+INSERT INTO `spel` VALUES ('tompa', 5, 1);
+INSERT INTO `spel` VALUES ('tompa', 105, 6);
+INSERT INTO `spel` VALUES ('tompa', 130, 6);
+INSERT INTO `spel` VALUES ('tompa', 135, 6);
+INSERT INTO `spel` VALUES ('tompa', 155, 7);
+INSERT INTO `spel` VALUES ('RossTheBoss', 245, 13);
+INSERT INTO `spel` VALUES ('Venjan', 60, 4);
+INSERT INTO `spel` VALUES ('RossTheBoss', 130, 7);
+INSERT INTO `spel` VALUES ('RossTheBoss', 310, 16);
+INSERT INTO `spel` VALUES ('Venjan', 105, 6);
+INSERT INTO `spel` VALUES ('tompa', 100, 6);
+INSERT INTO `spel` VALUES ('nisse', 100, 6);
+INSERT INTO `spel` VALUES ('rtyfghg', 60, 4);
+INSERT INTO `spel` VALUES ('Tompa', 5, 1);
+INSERT INTO `spel` VALUES ('Tompa', 60, 4);
+INSERT INTO `spel` VALUES ('Tompa', 15, 1);
+INSERT INTO `spel` VALUES ('iug', 65, 4);
+INSERT INTO `spel` VALUES ('tompa', 60, 4);
+INSERT INTO `spel` VALUES ('tompa', 65, 4);
+INSERT INTO `spel` VALUES ('DP', 5, 1);
+INSERT INTO `spel` VALUES ('DP', 5, 1);
+INSERT INTO `spel` VALUES ('DP', 10, 1);
+INSERT INTO `spel` VALUES ('DP', 10, 1);
+INSERT INTO `spel` VALUES ('DP', 5, 1);
+INSERT INTO `spel` VALUES ('DP', 25, 2);
+INSERT INTO `spel` VALUES ('DP', 5, 1);
+INSERT INTO `spel` VALUES ('DP', 70, 4);
+INSERT INTO `spel` VALUES ('DP', 0, 1);
+INSERT INTO `spel` VALUES ('DP', 65, 4);
+INSERT INTO `spel` VALUES ('DP', 30, 2);
+INSERT INTO `spel` VALUES ('DP', 60, 4);
+INSERT INTO `spel` VALUES ('DP', 25, 2);
+INSERT INTO `spel` VALUES ('DP', 60, 4);
+INSERT INTO `spel` VALUES ('DP', 35, 2);
+INSERT INTO `spel` VALUES ('DP', 25, 2);
+INSERT INTO `spel` VALUES ('DP', 70, 4);
+INSERT INTO `spel` VALUES ('tompa', 125, 7);
+INSERT INTO `spel` VALUES ('tompa', 155, 7);
+INSERT INTO `spel` VALUES ('DP', 60, 4);
+INSERT INTO `spel` VALUES ('DP', 70, 4);
+INSERT INTO `spel` VALUES ('tompa', 165, 7);
+INSERT INTO `spel` VALUES ('DP', 80, 5);
+INSERT INTO `spel` VALUES ('DP', 85, 4);
+INSERT INTO `spel` VALUES ('DP', 95, 4);
+INSERT INTO `spel` VALUES ('tompa', 150, 6);
+INSERT INTO `spel` VALUES ('DP', 130, 6);
+INSERT INTO `spel` VALUES ('tompa', 175, 7);
+INSERT INTO `spel` VALUES ('DP', 95, 4);
+INSERT INTO `spel` VALUES ('tompa', 195, 10);
+INSERT INTO `spel` VALUES ('tompa', 285, 15);
+INSERT INTO `spel` VALUES ('Tompa', 105, 6);
+INSERT INTO `spel` VALUES ('tompa', 0, 1);
+INSERT INTO `spel` VALUES ('tompa', 65, 4);
+INSERT INTO `spel` VALUES ('gbnvbn', 105, 6);
+INSERT INTO `spel` VALUES ('hvmnhmhj', 5, 1);
+INSERT INTO `spel` VALUES ('gnvgn', 65, 4);
+INSERT INTO `spel` VALUES ('yghjhgj', 110, 6);
+INSERT INTO `spel` VALUES ('homo', 120, 6);
+INSERT INTO `spel` VALUES ('gnbfghg', 5, 1);
+INSERT INTO `spel` VALUES ('gfnvgn', 5, 1);
+INSERT INTO `spel` VALUES ('Djurgårdare', 0, 1);
+INSERT INTO `spel` VALUES ('olle', 10, 1);
+INSERT INTO `spel` VALUES ('Djurgårdare', 0, 1);
+INSERT INTO `spel` VALUES ('dfgbvb', 70, 4);
+INSERT INTO `spel` VALUES ('Djurgårdare', 0, 1);
+INSERT INTO `spel` VALUES ('hjkhk', 105, 6);
+INSERT INTO `spel` VALUES ('Djurgårdare', 75, 4);
+INSERT INTO `spel` VALUES ('Djurgårdare', 0, 1);
+INSERT INTO `spel` VALUES ('ghngfn', 65, 4);
+INSERT INTO `spel` VALUES ('Djurgårdare', 5, 1);
+INSERT INTO `spel` VALUES ('Djurgårdare', 5, 1);
+INSERT INTO `spel` VALUES ('DP', 105, 6);
+INSERT INTO `spel` VALUES ('DP', 145, 6);
+INSERT INTO `spel` VALUES ('DP', 140, 6);
+INSERT INTO `spel` VALUES ('tompa', 125, 7);
+INSERT INTO `spel` VALUES ('denis', 25, 2);
+INSERT INTO `spel` VALUES ('fittan', 5, 1);
+INSERT INTO `spel` VALUES ('fittan', 60, 4);
+INSERT INTO `spel` VALUES ('fittan', 0, 1);
+INSERT INTO `spel` VALUES ('fittan', 125, 7);
+INSERT INTO `spel` VALUES ('fittan', 165, 9);
+INSERT INTO `spel` VALUES ('fittan', 105, 6);
+INSERT INTO `spel` VALUES ('fittan', 105, 6);
+INSERT INTO `spel` VALUES ('fittan', 100, 6);
+INSERT INTO `spel` VALUES ('tompa', 100, 6);
+INSERT INTO `spel` VALUES ('tompa', 105, 6);
+INSERT INTO `spel` VALUES ('tompa', 165, 9);
+INSERT INTO `spel` VALUES ('o', 285, 15);
+INSERT INTO `spel` VALUES ('tompa', 115, 6);
+INSERT INTO `spel` VALUES ('tompa', 100, 6);
+INSERT INTO `spel` VALUES ('DP', 95, 4);
+INSERT INTO `spel` VALUES ('Matematikern', 65, 4);
+INSERT INTO `spel` VALUES ('Matematikern', 5, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 60, 4);
+INSERT INTO `spel` VALUES ('tompa', 70, 3);
+INSERT INTO `spel` VALUES ('tompa', 135, 6);
+INSERT INTO `spel` VALUES ('tompa', 95, 4);
+INSERT INTO `spel` VALUES ('tompa', 15, 1);
+INSERT INTO `spel` VALUES ('tompa', 175, 7);
+INSERT INTO `spel` VALUES ('antti', 0, 1);
+INSERT INTO `spel` VALUES ('antti', 50, 3);
+INSERT INTO `spel` VALUES ('antti', 105, 6);
+INSERT INTO `spel` VALUES ('Antzon', 65, 4);
+INSERT INTO `spel` VALUES ('Antzon', 240, 12);
+INSERT INTO `spel` VALUES ('Antzon', 35, 2);
+INSERT INTO `spel` VALUES ('RossTheBoss', 95, 5);
+INSERT INTO `spel` VALUES ('jonas', 5, 1);
+INSERT INTO `spel` VALUES ('jonas', 40, 2);
+INSERT INTO `spel` VALUES ('jonas', 75, 4);
+INSERT INTO `spel` VALUES ('gonzo', 60, 4);
+INSERT INTO `spel` VALUES ('gonzo', 60, 4);
+INSERT INTO `spel` VALUES ('jonas', 140, 7);
+INSERT INTO `spel` VALUES ('gonshi', 55, 3);
+INSERT INTO `spel` VALUES ('jonas', 95, 5);
+INSERT INTO `spel` VALUES ('gonshi', 80, 4);
+INSERT INTO `spel` VALUES ('jonas', 25, 2);
+INSERT INTO `spel` VALUES ('jonas', 195, 10);
+INSERT INTO `spel` VALUES ('jonas', 0, 1);
+INSERT INTO `spel` VALUES ('jonas', 25, 2);
+INSERT INTO `spel` VALUES ('forza gnaget', 100, 5);
+INSERT INTO `spel` VALUES ('HEJA AIK', 30, 2);
+INSERT INTO `spel` VALUES ('gonshi', 65, 4);
+INSERT INTO `spel` VALUES ('gonshi', 110, 6);
+INSERT INTO `spel` VALUES ('HEJA AIK', 140, 7);
+INSERT INTO `spel` VALUES ('gonshi', 65, 4);
+INSERT INTO `spel` VALUES ('HEJA AIK', 5, 1);
+INSERT INTO `spel` VALUES ('gonshi', 10, 1);
+INSERT INTO `spel` VALUES ('HEJA AIK', 110, 6);
+INSERT INTO `spel` VALUES ('gonshi', 70, 4);
+INSERT INTO `spel` VALUES ('gonshi', 100, 6);
+INSERT INTO `spel` VALUES ('gonshi', 65, 4);
+INSERT INTO `spel` VALUES ('HEJA AIK', 265, 13);
+INSERT INTO `spel` VALUES ('gonshi', 65, 4);
+INSERT INTO `spel` VALUES ('gonshi', 100, 6);
+INSERT INTO `spel` VALUES ('gonshi', 5, 1);
+INSERT INTO `spel` VALUES ('gonshi', 65, 4);
+INSERT INTO `spel` VALUES ('jonas', 130, 7);
+INSERT INTO `spel` VALUES ('jonas', 115, 6);
+INSERT INTO `spel` VALUES ('tompa', 65, 3);
+INSERT INTO `spel` VALUES ('tompa', 270, 11);
+INSERT INTO `spel` VALUES ('Matematikern', 0, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 110, 6);
+INSERT INTO `spel` VALUES ('Matematikern', 5, 1);
+INSERT INTO `spel` VALUES ('Matematikern', 100, 6);
+INSERT INTO `spel` VALUES ('Petter', 25, 2);
+INSERT INTO `spel` VALUES ('Masove', 40, 3);
+INSERT INTO `spel` VALUES ('Masove', 5, 1);
+INSERT INTO `spel` VALUES ('tompa', 165, 9);
+INSERT INTO `spel` VALUES ('dfgdsfg', 105, 6);
+INSERT INTO `spel` VALUES ('gfhfgh', 115, 6);
+INSERT INTO `spel` VALUES ('fghfgh', 175, 9);
+INSERT INTO `spel` VALUES ('Lars 1 1 luktar bajs', 210, 9);
+INSERT INTO `spel` VALUES ('Pecka', 130, 7);
+INSERT INTO `spel` VALUES ('Rossen', 395, 20);
+INSERT INTO `spel` VALUES ('62Venjan', 105, 6);
+INSERT INTO `spel` VALUES ('sdf', 245, 13);
+    
