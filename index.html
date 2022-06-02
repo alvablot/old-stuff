@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var x = 700,
+        y = 450;
+      var bredd = screen.width;
+      var hojd = screen.height;
+      var posX = bredd / 2 - x / 2;
+      var posY = hojd / 2 - y / 2;
+      var fonster =
+        "left=" +
+        posX +
+        ",top=" +
+        (posY - 100) +
+        ",width=" +
+        x +
+        ",height=" +
+        y;
+    </script>
+  </head>
+
+  <body>
+    <a href="#" onClick="window.open('index.html','spel',fonster)"
+      >Starta spelet</a
+    >
+  </body>
+</html>
