@@ -13,24 +13,24 @@
 <?php
 $ipadress = $_SERVER['REMOTE_ADDR'];
 $today = date("Y-m-d H:i:s");
-if(!empty($_GET['namn'])){
+if (!empty($_GET['namn'])) {
 	$namn = $_GET['namn'];
 	$points = $_GET['points'];
 	$level = $_GET['level'];
 
 	$connection = mysql_connect("localhost", "", "") or die("Kunde inte skapa koppling!");
-	mysql_select_db("alvablot_com",$connection) or die("Kunde inte v�lja databas");
-	
+	mysql_select_db("alvablot_com", $connection) or die("Kunde inte v�lja databas");
+
 	$laggTill = "INSERT INTO spel(namn, poang, niva, datum, ip) VALUES ('$namn', '$points','$level','$today','$ipadress')";
 	mysql_query($laggTill) or die("Det gick inte att l�gga till information!");
 	header("Location:visa_resultat.php");
 	mysql_close($connection);
-
 }
 
 ?>
 
 <html>
+
 <head>
 	<title>Untitled</title>
 </head>
@@ -40,4 +40,5 @@ if(!empty($_GET['namn'])){
 
 
 </body>
+
 </html>
